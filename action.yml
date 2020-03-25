@@ -1,0 +1,21 @@
+name: 'kubectl - Google Cloud GKE cluster.'
+description: 'GitHub Action to run kubectl commands'
+branding:
+  icon: 'cloud-lightning'
+  color: 'blue'
+inputs:
+  APPLICATION_CREDENTIALS:
+    description: 'GCP authorization credentials'
+    required: true
+  PROJECT_ID:
+    description: 'Project id'
+    required: true
+  CLUSTER_NAME:
+    description: 'GKE Cluser Name'
+    required: true
+  ZONE_NAME:
+    description: 'Zone Name'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
