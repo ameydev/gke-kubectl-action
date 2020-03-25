@@ -1,7 +1,7 @@
 # gke-kubectl-action
-A Github Action which can be used to authenticate with Google Cloud Kubernetes Engine with the updated kube-config set up for you to `kubectl` actions on the `GKE` cluster.
+A Github Action which can be used to deploy your application by performing `kubectl` actions on the `GKE` cluster.
 
-To use this action, make sure you have created a GCP service account having the proper permissions given to it.
+To use this action, make sure you have created a GCP service account having the necessary permissions given to it.
 
 ## Usage
 
@@ -9,7 +9,9 @@ To use this action, make sure you have created a GCP service account having the 
 
 ```yaml
 name: Deploy App on GKE cluster.
-on: [push]
+on:
+  release:
+    types: [created]
 jobs:
   build:
     runs-on: ubuntu-latest
