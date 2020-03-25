@@ -28,6 +28,8 @@ gcloud container clusters get-credentials "$CLUSTER_NAME" --zone "$CLUSTER_ZONE"
 # verify kube-context
 kubectl config current-context
 
+command="kubectl"
+
 if [[ ! $# -eq 0 ]] ; then
-    sh -c "kubectl $*"
+    sh -c "$command $*"
 fi
