@@ -3,6 +3,11 @@ A Github Action which can be used to deploy your application by performing `kube
 
 To use this action, make sure you have created a GCP service account having the necessary permissions given to it.
 
+## Secrets
+APPLICATION_CREDENTIALS - To authorize in GCP you need to have a service account key. Required Base64 encoded service account key exported as JSON. To encode a JSON file use: base64 ~/<account_id>.json
+
+PROJECT_ID - must be provided to activate a specific project.
+
 ## Usage
 
 ## Deploy your app when a release is created
