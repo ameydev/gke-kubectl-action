@@ -56,3 +56,8 @@ jobs:
       with:
         args: apply -f packaging/k8s/manifests/ -n staging
 ```
+
+TODO:
+- Add github actions (Build and Release workflows.)
+- Exclude any yaml, wildcard for input
+- Update README (Different Paths, Exclude any yaml, wildcard for input)
