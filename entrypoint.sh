@@ -19,9 +19,6 @@ if [ ! -d "$HOME/.config/gcloud" ]; then
 
 fi
 
-echo ::add-path::/google-cloud-sdk/bin/gcloud
-echo ::add-path::/google-cloud-sdk/bin/gsutil
-
 # Update kubeConfig.
 gcloud container clusters get-credentials "$CLUSTER_NAME" --zone "$ZONE_NAME" --project "$PROJECT_ID"
 
